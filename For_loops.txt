@@ -1,0 +1,19 @@
+correct_number = 2
+num_of_chances = range(1,4)
+max = range(11)
+counter = 0
+
+for counter in num_of_chances:
+  user_input = int(input('Kindly guess a number from 1 to 10: '))
+  if user_input in max:
+    print('checking...')
+    if user_input == correct_number:
+      print('congrats, you passed')
+      break
+    
+    else:
+      counter += 1
+      if counter in num_of_chances:
+        print('wrong, try again')
+      else:
+        print('You have failed because you have reached the maximum number of chances allowed')
